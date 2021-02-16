@@ -2,11 +2,10 @@
 session_start();
 include 'config/koneksi.php';
 include 'config/func.php';
+$nama_bulan = array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember");
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Mirrored from www.aksisweb.com/theme/fixed/layouts-5/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 Jan 2021 09:33:36 GMT -->
 
 <head>
     <meta charset="utf-8">
@@ -67,77 +66,16 @@ include 'config/func.php';
                     <div class="search-form hidden-xs">
                     </div>
                     <ul class="list-inline top-right-nav">
-                        <li class="dropdown icons-dropdown d-none-m">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-bell"></i>
-                                <div class="notify setpos"> <span class="heartbit"></span> <span class="point"></span> </div>
-                            </a>
-                            <ul class="dropdown-menu top-dropdown lg-dropdown notification-dropdown">
-                                <li>
-                                    <div class="dropdown-header">
-                                        <a class="float-right" href="#"><small>View All</small></a> Notifications
-                                    </div>
-                                    <div class="scrollDiv">
-                                        <div class="notification-list">
 
-                                            <a class="clearfix" href="javascript:%20void(0);">
-                                                <span class="notification-icon">
-                                                    <i class="icon-cloud-upload text-primary"></i>
-                                                </span>
-                                                <span class="notification-title">Upload Complete</span>
-                                                <span class="notification-description">Lorem Ipsum is simply dummy text of the printing.</span>
-                                                <span class="notification-time">15 minutes ago</span>
-                                            </a>
-
-                                            <a class="clearfix" href="javascript:%20void(0);">
-                                                <span class="notification-icon">
-                                                    <i class="icon-info text-warning"></i>
-                                                </span>
-                                                <span class="notification-title">Storage Space low</span>
-                                                <span class="notification-description">Lorem Ipsum is simply dummy text of the printing.</span>
-                                                <span class="notification-time">15 minutes ago</span>
-                                            </a>
-
-                                            <a class="clearfix" href="javascript:%20void(0);">
-                                                <span class="notification-icon">
-                                                    <i class="icon-check text-success"></i>
-                                                </span>
-                                                <span class="notification-title">Project Task Complete</span>
-                                                <span class="notification-description">Lorem Ipsum is simply dummy text of the printing.</span>
-                                                <span class="notification-time">15 minutes ago</span>
-                                            </a>
-
-                                            <a class="clearfix" href="javascript:%20void(0);">
-                                                <span class="notification-icon">
-                                                    <i class=" icon-graph text-danger"></i>
-                                                </span>
-                                                <span class="notification-title">CPU Usage</span>
-                                                <span class="notification-description">Lorem Ipsum is simply dummy text of the printing.</span>
-                                                <span class="notification-time">15 minutes ago</span>
-                                            </a>
-
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
                         <li class="dropdown avtar-dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                 <img alt="" class="rounded-circle" src="assets/img/avtar-2.png" width="30">
                                 Admin
                             </a>
                             <ul class="dropdown-menu top-dropdown">
-                                <li>
-                                    <a class="dropdown-item" href="javascript:%20void(0);"><i class="icon-bell"></i> Activities</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="javascript:%20void(0);"><i class="icon-user"></i> Profile</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="javascript:%20void(0);"><i class="icon-settings"></i> Settings</a>
-                                </li>
                                 <li class="dropdown-divider"></li>
                                 <li>
-                                    <a class="dropdown-item" href="javascript:%20void(0);"><i class="icon-logout"></i> Logout</a>
+                                    <a class="dropdown-item" href="login.html"><i class="icon-logout"></i> Logout</a>
                                 </li>
                             </ul>
                         </li>
@@ -175,6 +113,7 @@ include 'config/func.php';
                         <ul class="nav-second-level nav flex-column sub-menu" aria-expanded="false">
                             <li class="nav-item"><a class="nav-link" href="admin-form.php">Admin</a></li>
                             <li class="nav-item"><a class="nav-link" href="pegawai-form.php">Pegawai</a></li>
+                            <li class="nav-item"><a class="nav-link" href="gaji-form.php">Gaji</a></li>
                         </ul>
                     </li>
 
@@ -183,6 +122,7 @@ include 'config/func.php';
                         <ul class="nav-second-level nav flex-column sub-menu" aria-expanded="false">
                             <li class="nav-item"><a class="nav-link" href="admin-data.php">Admin</a></li>
                             <li class="nav-item"><a class="nav-link" href="pegawai-data.php">Pegawai</a></li>
+                            <li class="nav-item"><a class="nav-link" href="gaji-data.php">Gaji</a></li>
                         </ul>
                     </li>
                 </ul>

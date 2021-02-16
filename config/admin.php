@@ -15,11 +15,11 @@ if (isset($_POST['submit'])) {
 }
 
 if (isset($_GET['del'])) {
-    $sql = "DELETE from $nama_tabel where user_id='$_GET[id]'";
+    $sql = "DELETE FROM $nama_tabel WHERE user_id='$_GET[id]'";
     $pesan = "User";
     $sks = "../admin-data.php";
     $ggl = "../admin-data.php";
-    hapusdata($sql, $pesan, $sks, $ggl);
+    tambahdata($sql, $pesan, $sks, $ggl);
 }
 
 if (isset($_POST['update'])) {
